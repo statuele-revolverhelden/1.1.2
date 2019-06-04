@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<playlist>
+
+  dtSongs.Columns.Add(dcId);
+  dtSongs.Columns.Add(dcArtist);
+  dtSongs.Columns.Add(dcTitle);
+  dtSongs.Columns.Add(dcYear);
+  dtSongs.Columns.Add(dcGenre);
+  dtSongs.Columns.Add(dcTime);
+  dtSongs.Columns.Add(dcFile);
+  ds.Tables.Add(dtSongs);
+
+  ds.ReadXml(file);
+</playlist>

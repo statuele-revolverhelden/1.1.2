@@ -1,0 +1,10 @@
+﻿<!DOCTYPE html>
+
+@using System.Data;
+@using XmlCrud.App_Code;
+
+@{
+    SongMethods mySongMethods = new SongMethods();
+    string file = @"~\App_Data\Playlist.xml";
+    DataSet ds = mySongMethods.GetAllSongs(file);
+ }
