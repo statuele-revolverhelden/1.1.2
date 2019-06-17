@@ -1,4 +1,54 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" standalone="yes"?>
+<playlist>
+  <song>
+    <id>1</id>
+    <artist>Billie Eilish</artist>
+    <title>Bad guy</title>
+    <year>2019</year>
+    <genre>alternative/indie</genre>
+    <time>3:25</time>
+    <file></file>
+  </song>
+  <song>
+    <id>2</id>
+    <artist>Chris Hadfield</artist>
+    <title>Space Oddity</title>
+    <year>2013</year>
+    <genre>Space Rock</genre>
+    <time>5:30</time>
+    <file></file>
+  </song>
+  <song>
+    <id>3</id>
+    <artist>Sheck Wes</artist>
+    <title>Mo Bamba</title>
+    <year>2017</year>
+    <genre>hiphop/rap</genre>
+    <time>3:05</time>
+    <file></file>
+  </song>
+  <song>
+    <id>4</id>
+    <artist>Lil Nas X, Billy Ray Cyrus</artist>
+    <title>Old Town Road</title>
+    <year>2018</year>
+    <genre>Country rap</genre>
+    <time>2:37</time>
+    <file></file>
+  </song>
+  <song>
+    <id>5</id>
+    <artist>P!nk</artist>
+    <title>Walk Me Home</title>
+    <year>2019</year>
+    <genre>Pop</genre>
+    <time>3:16</time>
+    <file></file>
+  </song>
+</playlist>
+
+
+
 
 <playlist>
 
