@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+
 @using System.Data;
 @using XmlCrud.App_Code;
 
 @{
-    SongeMethods mySongMethods = Session["playlistClass"] as SongMethods;
-    string file= Sessiom["file"] as string
+    SongMethods mySongMethods = Session["playlistClass"] as SongMethods;
+    string file = Session["file"] as string;
 }
+
 <html>
 <head>
 </head>
@@ -25,6 +27,7 @@
     @if (IsPost)
     {
     DataRow dr = mySongMethods.GetEmptyDataRow();
+
     dr[0] = Request.Form["id"];
     dr[1] = Request.Form["artist"];
     dr[2] = Request.Form["title"];
@@ -32,9 +35,9 @@
     dr[4] = Request.Form["genre"];
     dr[5] = Request.Form["time"];
     dr[6] = Request.Form["file"];
-    mySongMethods.CreayeSong(de, file);
-    Response.Redirect(@"~/index.cshtml");
 
+    mySongMethods.CreateSong(dr, file);
+    Response.Redirect(@"~/index.cshtml");
     }
 </body>
 </html>

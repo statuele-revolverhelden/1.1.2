@@ -1,13 +1,15 @@
 ﻿<!DOCTYPE html>
 @using System.Data;
 @using XmlCrud.App_Code;
+
 @{
-    SongMethods mySongMethods = new SongeMethods();
+    SongMethods mySongMethods = new SongMethods();
     string file = @"~\App_Data\Playlist.xml;
     DataSet ds = mySongMethods.GetAllSongs(filePath);
     Session["playlistClass"] = mySongMethods;
     Session["file"] = file;
 }
+
 <html>
 <head>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -43,6 +45,6 @@
     </table>
 
     <br /><br />
-    <a href="pages\CreateSong.cshtml"> een nieuw lied toevoegen.</a>
+    <a href="Pages\CreateSong.cshtml"> een nieuw lied toevoegen.</a>
 </body>
 </html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+
 @using System.Data;
 @using XmlCrud.App_Code;
 
 @{
-    SongeMethods mySongMethods = Session["playlistClass"] as SongMethods;
-    string file= Sessiom["file"] as string
+    SongMethods mySongMethods = Session["playlistClass"] as SongMethods;
+    string file = Session["file"] as string;
 }
+
 <html>
 <head>
 </head>
@@ -20,9 +22,9 @@
 
     @if (IsPost)
 {
-    if (request.Form["keuze"] == "ja")
+    if (Request.Form["keuze"] == "ja")
     {
-        String id = Request.QueryString["id"];
+        string id = Request.QueryString["id"];
         mySongMethods.DeleteSong(id, file);
     }
 

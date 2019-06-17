@@ -29,3 +29,42 @@ public DataSet GetAllSongs(string file)
 
     return ds;
 }
+
+public class SongMethods
+{
+    private DataSet ds = new DataSet("playlist");
+
+    public SongMethods()
+    {
+    }
+
+    public DataSet GetAllSongs(string pFile)
+    {
+        DataTable dtSongs = new DataTable("song");
+    }
+
+    public void CreateSong(DataRow dataRow, string file)
+    {
+        ds.Tables["song"].Rows.Add(dataRow);
+        ds.WriteXml(HttpContext.Current.Server.MapPath(file));
+    }
+
+    public DataRow GetEmptyDataRow()
+    {
+        DataRow dr = ds.Tables["song"].NewRow();
+        return dr;
+    }
+
+    public void DeleteSong(string id, string file)
+    {
+        DataRow[] drArray = ds.Tables["song"].Select("id ='" + id + "'");
+        if (drArray != null && drArray.Length > 0)
+        {
+            drArray[0].Delete();
+            ds.WriteXml(HttpContext.Current.Server.MapPath(file));
+        }
+    }
+
+}
+
+
